@@ -8,9 +8,9 @@ func main() {
 	var pi *int = &i
 
 	i++
-	fmt.Printf("pointer = %d", i)
+	fmt.Printf("pointer = %d, %d \n", i, &i)
 
 	*pi++
-	fmt.Printf("pi = %d", pi)
+	fmt.Printf("pi = %d, %d \n", pi, &pi)
 
 }
