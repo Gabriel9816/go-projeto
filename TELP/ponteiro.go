@@ -4,7 +4,6 @@ import "fmt"
 
 func main() {
 	i := 1
-
 	var pi *int = &i
 
 	i++

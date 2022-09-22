@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello, World!")
+	fmt.Println("Criar uma função que converta a moeda Real , para moeda dólar")
 }

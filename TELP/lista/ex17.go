@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-		fmt.Println("Hello, World!")
+	fmt.Println("Escrever uma lista de nomes que retorne em ordem alfabética")
 }
