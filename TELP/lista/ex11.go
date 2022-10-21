@@ -9,6 +9,6 @@ func main() {
 	fmt.Print("Digite a temperatura em Celcius: ")
 	fmt.Scanln(&c)
 	fmt.Println(" ")
-	var f float32 = c*1.8 + 32
+	var f float32 = c*1.8 + 32 //formula para converter celsius em Fahrenheit
 	fmt.Printf("Temperatura em Fahrenheit: %.2f \n", f)
 }

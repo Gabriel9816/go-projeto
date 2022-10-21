@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	fmt.Println("crie uma função que some duas notas")
 	var n1, n2 float32
-
+	
 	fmt.Print("Digite o n1: ")
 	fmt.Scanln(&n1)
 	fmt.Print("Digite o n2: ")
