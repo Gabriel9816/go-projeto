@@ -1,27 +1,39 @@
 package main
 
-import "fmt"
+import (
+	"crypto/rand"
+	"fmt"
+	"math/big"
+)
 
+const floatPrecision = 1000000
+
+func GetRandInt(min, max int) int {
+	nBig, _ := rand.Int(rand.Reader, big.NewInt(int64(max+1-min)))
+	n := nBig.Int64()
+	return int(n) + min
+}
+
+func GetRandFloat(min, max float64) float64 {
+	minInt := int(min * floatPrecision)
+	maxInt := int(max * floatPrecision)
+
+	return float64(GetRandInt(minInt, maxInt)) / floatPrecision
+}
 func main() {
 
-	fmt.Printf("Questão 01/10 - Escreva um algoritmo em go usando array que calcule a média simples de 99 valores (.float64)")
+	fmt.Printf("Questão 01/10 - Escreva um algoritmo em go usando array que calcule a média simples de 99 valores (.float64) \n")
 
-	fmt.Printf("Questão 02/10 - Escreva um algoritmo em go usando array contendo 5 valores inteiros de 8bits que calcule um array de saida .float64"+
-	"com valores normalizados 0 a 1 de saida e escreva o resultado")
+	var array [99]float64
+	for i := 0; i < 99; i++ {
+		array[i] = GetRandFloat(1, 10)
+	}
 
-	fmt.Printf("Questão 03/10 - ")
-	
-	fmt.Printf("Questão 04/10 - ")
-	
-	fmt.Printf("Questão 05/10 - ")
-	
-	fmt.Printf("Questão 06/10 - ")
-	
-	fmt.Printf("Questão 07/10 - ")
-	
-	fmt.Printf("Questão 08/10 - ")
-	
-	fmt.Printf("Questão 09/10 - ")
-	
-	fmt.Printf("Questão 10/10 - ")
+	n := 99
+	var soma float64 = 0
+	for i := 0; i < n; i++ {
+		soma += (array[i])
+	}
+	media := (float64(soma)) / (float64(n))
+	fmt.Printf("\nMedia = %.2f \n", media)
 }
